@@ -5,7 +5,7 @@
 	export let text: string;
 </script>
 
-<div class="flex flex-row gap-6 py-3 text-grey hover:text-white duration-300">
+<div class="flex flex-row gap-6 py-3 text-grey hover:text-base duration-300 font-bold">
 	<svelte:component this={icon} />
 	{text}
 </div>

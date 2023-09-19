@@ -2,10 +2,14 @@
 export default {
 	content: ['./src/**/*.{html,js,svelte,ts}'],
 	theme: {
-		colors: {
-			dark: '#121212',
-			white: '#ffffff',
-			grey: '#a7a7a7'
+		colors: {},
+		backgroundColor: {
+			primary: '#121212',
+			highlight: '#1a1a1a'
+		},
+		textColor: {
+			primary: '#fff',
+			subdued: '#6a6a6a'
 		}
 	},
 	plugins: []
