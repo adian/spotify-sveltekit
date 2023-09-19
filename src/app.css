@@ -4,4 +4,24 @@
 
 html {
 	@apply bg-primary text-primary;
+	height: 100%;
+}
+
+body {
+	height: 100%;
+	overflow: hidden;
+	transition-duration: 500;
+}
+
+::-webkit-scrollbar {
+	width: 28px;
+}
+
+::-webkit-scrollbar-thumb {
+	@apply bg-red;
+
+	background-clip: padding-box;
+	border: 10px solid transparent;
+	border-radius: 16px;
+	min-height: 30px;
 }

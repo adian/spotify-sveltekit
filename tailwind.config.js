@@ -5,7 +5,10 @@ export default {
 		colors: {},
 		backgroundColor: {
 			primary: '#121212',
-			highlight: '#1a1a1a'
+			highlight: '#1a1a1a',
+			red: 'red',
+			yellow: 'yellow',
+			blue: 'blue'
 		},
 		textColor: {
 			primary: '#fff',

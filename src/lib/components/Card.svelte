@@ -1,6 +1,3 @@
-<script lang="ts">
-</script>
-
-<div class="rounded-md bg-highlight">
+<div class="rounded-md bg-highlight {$$restProps.class || ''}">
 	<slot />
 </div>
