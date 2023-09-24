@@ -3,9 +3,13 @@
 
 	export let icon: ComponentType;
 	export let text: string;
+	export let href: string;
 </script>
 
-<div class="flex flex-row gap-6 py-3 text-subdued hover:text-primary duration-300 font-bold ml-3">
-	<svelte:component this={icon} class="w-6 h-6" />
+<a
+	class="ml-3 flex cursor-pointer flex-row gap-6 py-3 font-bold text-subdued duration-300 hover:text-primary"
+	{href}
+>
+	<svelte:component this={icon} class="h-6 w-6" />
 	{text}
-</div>
+</a>
