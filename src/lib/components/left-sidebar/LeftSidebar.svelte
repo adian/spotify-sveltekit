@@ -1,7 +1,7 @@
 <script>
 	import MenuItem from './MenuItem.svelte';
 	import Card from '../Card.svelte';
-	import Playlists from './Playlists.svelte';
+	import PlaylistsList from './PlaylistsList.svelte';
 	import IconHome from '../icons/IconHome.svelte';
 	import IconMusicLibrary from '../icons/IconMusicLibrary.svelte';
 	import IconSearch from '../icons/IconSearch.svelte';
@@ -20,7 +20,7 @@
 		<div class="flex h-full flex-col">
 			<MenuItem icon={IconMusicLibrary} text="Your Library" href="/albums" />
 
-			<Playlists class="min-h-0 flex-shrink flex-grow basis-0" />
+			<PlaylistsList class="flex-shrink flex-grow basis-0 overflow-auto" />
 		</div>
 	</Card>
 </nav>

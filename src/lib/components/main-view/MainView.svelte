@@ -2,7 +2,7 @@
 	import { browser } from '$app/environment';
 	import { goto } from '$app/navigation';
 	import { page } from '$app/stores';
-	import { assertPresent, lastElement } from '$lib/utils/utils';
+	import { assertPresent, lastElement } from '$lib/utils';
 	import { onDestroy } from 'svelte';
 	import Card from '../Card.svelte';
 	import IconArrowLeft from '../icons/IconArrowLeft.svelte';
@@ -47,12 +47,14 @@
 </script>
 
 <main class="flex-grow">
-	<Card class="flex h-full w-full flex-col">
+	<Card class="flex h-full max-h-full w-full flex-col">
 		<header class="py-4">
 			<RoundButton icon={IconArrowLeft} disabled={isBackButtonDisabled} on:click={goBack} />
 			<RoundButton icon={IconArrowRight} disabled={isForwardButtonDisabled} on:click={goForward} />
 		</header>
 
-		<slot />
+		<div class="basis-0 flex-grow flex-shrink min-h-0 overflow-auto">
+			<slot />
+		</div>
 	</Card>
 </main>
