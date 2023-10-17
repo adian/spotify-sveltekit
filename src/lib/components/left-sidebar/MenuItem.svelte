@@ -10,8 +10,8 @@
 </script>
 
 <a
-	class="ml-3 flex cursor-pointer flex-row gap-6 py-3 font-bold text-subdued duration-300 hover:text-primary
-	{isCurrentPage ? 'text-primary' : ''}"
+	class="ml-3 flex cursor-pointer flex-row gap-6 py-3 font-bold hover:text-primary
+	{isCurrentPage ? 'text-primary' : 'text-subdued duration-300'}"
 	{href}
 	aria-current={isCurrentPage ? 'page' : null}
 >
