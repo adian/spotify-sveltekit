@@ -83,5 +83,7 @@ const TRACKS: Track[] = [
 export const MOVIE_SONGS_PLAYLIST = createCollection({
 	name: 'Best Movie Songs',
 	tracks: TRACKS,
-	type: 'playlist'
+	type: 'playlist',
+	color: '#575668',
+	coverSrc: 'https://www.theaudiodb.com/images/media/track/thumb/xurswq1487083690.jpg'
 });

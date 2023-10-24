@@ -78,5 +78,6 @@ export const QUEEN_A_DAY_AT_RACES: Collection = createCollection({
 	subtitle: 'Queen',
 	tracks: TRACKS,
 	type: 'album',
-	coverSrc: 'https://www.theaudiodb.com/images/media/album/thumb/uyprpy1397211527.jpg'
+	coverSrc: 'https://www.theaudiodb.com/images/media/album/thumb/uyprpy1397211527.jpg',
+	color: '#f4eff0'
 });

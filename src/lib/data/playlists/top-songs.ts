@@ -720,5 +720,7 @@ const TRACKS: Track[] = [
 export const TOP_SONGS_PLAYLIST: Collection = createCollection({
 	name: 'Top songs',
 	tracks: TRACKS,
-	type: 'playlist'
+	type: 'playlist',
+	coverSrc: 'https://www.theaudiodb.com/images/media/track/thumb/syuxst1484691779.jpg',
+	color: '#595038'
 });

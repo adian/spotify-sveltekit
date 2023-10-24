@@ -16,14 +16,12 @@ export interface Collection {
 	readonly coverSrc: string;
 	readonly totalTimeText: string;
 	readonly url: string;
+	readonly color: string;
 }
 
-export function createCollection(
-	p: Omit<Collection, 'totalTimeText' | 'url'> & { coverSrc?: string }
-): Collection {
+export function createCollection(p: Omit<Collection, 'totalTimeText' | 'url'>): Collection {
 	return {
 		...p,
-		coverSrc: p.coverSrc ?? p.tracks[0].thumbUrl,
 		totalTimeText: totalTimeText(p.tracks),
 		url: '/' + p.type + '/' + encodeURIComponent(p.name)
 	};

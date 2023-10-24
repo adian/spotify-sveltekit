@@ -18,12 +18,14 @@
 
 		return result;
 	}
+
 </script>
 
-<div class="p-4">
-	<div class="mb-5 flex flex-row items-end gap-6">
+<div class="">
+
+	<div class="py-5 flex flex-row items-end gap-6" style="background: linear-gradient(to bottom, {data.color}, transparent)">
 		<div>
-			<img src={data.coverSrc} class="h-60 w-60" alt="playlist cover" />
+			<img crossorigin="anonymous" src={data.coverSrc} class="h-60 w-60 " alt="playlist cover" />
 		</div>
 		<div>
 			<span class="text-sm">{data.type}</span>

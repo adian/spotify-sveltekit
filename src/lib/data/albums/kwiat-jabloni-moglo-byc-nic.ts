@@ -79,6 +79,7 @@ export const KWIAT_JABLONI_MOGLO_BYC_NIC = createCollection({
 	name: 'Mogło być nic',
 	subtitle: 'Kiwat Jabłoni',
 	coverSrc: 'https://www.theaudiodb.com/images/media/album/thumb/xu2rek1641207873.jpg',
+	color: '#51403e',
 	tracks: TRACKS,
 	type: 'album'
 });

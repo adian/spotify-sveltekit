@@ -174,5 +174,7 @@ const TRACKS: Track[] = [
 export const MOST_STREAMED_PLAYLIST = createCollection({
 	name: 'Most streamed songs',
 	tracks: TRACKS,
-	type: 'playlist'
+	type: 'playlist',
+	coverSrc: 'https://www.theaudiodb.com/images/media/track/thumb/wwvuvu1487239331.jpg',
+	color: '#A82415'
 });

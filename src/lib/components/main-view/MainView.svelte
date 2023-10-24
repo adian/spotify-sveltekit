@@ -47,13 +47,13 @@
 </script>
 
 <main class="flex-grow">
-	<Card class="flex h-full max-h-full w-full flex-col">
+	<Card class="flex h-full max-h-full w-full flex-col overflow-hidden">
 		<header class="py-4">
 			<RoundButton icon={IconArrowLeft} disabled={isBackButtonDisabled} on:click={goBack} />
 			<RoundButton icon={IconArrowRight} disabled={isForwardButtonDisabled} on:click={goForward} />
 		</header>
 
-		<div class="basis-0 flex-grow flex-shrink min-h-0 overflow-auto">
+		<div class="min-h-0 flex-shrink flex-grow basis-0 overflow-auto">
 			<slot />
 		</div>
 	</Card>
