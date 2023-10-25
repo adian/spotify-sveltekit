@@ -1,9 +1,20 @@
-<script lang="ts">
+<script >
 	import '../app.css';
 
 	import LeftSidebar from '$lib/components/left-sidebar/LeftSidebar.svelte';
 	import MainView from '$lib/components/main-view/MainView.svelte';
+	import { onNavigate } from '$app/navigation';
 
+	onNavigate((navigation) => {
+		if (!document.startViewTransition) return;
+
+		return new Promise((resolve) => {
+			document.startViewTransition(async () => {
+				resolve();
+				await navigation.complete;
+			})
+		})
+	})
 </script>
 
 <div class="flex h-full min-w-[800px] flex-col">
@@ -19,4 +30,3 @@
 	<!-- <footer style="background: blue">footer</footer> -->
 </div>
 
-<!-- TODO: add avg color from image https://github.com/fast-average-color/fast-average-color/blob/master/docs/examples.md#from-loaded-image -->

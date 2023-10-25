@@ -17,6 +17,7 @@ export interface Collection {
 	readonly totalTimeText: string;
 	readonly url: string;
 	readonly color: string;
+	readonly id: string;
 }
 
 export function createCollection(p: Omit<Collection, 'totalTimeText' | 'url'>): Collection {

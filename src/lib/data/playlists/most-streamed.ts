@@ -176,5 +176,6 @@ export const MOST_STREAMED_PLAYLIST = createCollection({
 	tracks: TRACKS,
 	type: 'playlist',
 	coverSrc: 'https://www.theaudiodb.com/images/media/track/thumb/wwvuvu1487239331.jpg',
-	color: '#A82415'
+	color: '#A82415',
+	id: 'MOST_STREAMED_PLAYLIST'
 });

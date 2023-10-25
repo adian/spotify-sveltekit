@@ -8,6 +8,7 @@
 	import IconArrowLeft from '../icons/IconArrowLeft.svelte';
 	import IconArrowRight from '../icons/IconArrowRight.svelte';
 	import RoundButton from './RoundButton.svelte';
+	import { mainViewCardStyle, mainViewHeaderStyle } from './main-view-store';
 
 	let backStack: URL[] = [];
 	$: isBackButtonDisabled = backStack.length <= 1;
@@ -46,9 +47,9 @@
 	}
 </script>
 
-<main class="flex-grow">
-	<Card class="flex h-full max-h-full w-full flex-col overflow-hidden">
-		<header class="py-4">
+<main class="w-full">
+	<Card class="flex h-full max-h-full w-full flex-col overflow-hidden" style={$mainViewCardStyle}>
+		<header class="p-4" style={$mainViewHeaderStyle}>
 			<RoundButton icon={IconArrowLeft} disabled={isBackButtonDisabled} on:click={goBack} />
 			<RoundButton icon={IconArrowRight} disabled={isForwardButtonDisabled} on:click={goForward} />
 		</header>

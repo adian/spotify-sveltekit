@@ -1,5 +1,4 @@
 <script lang="ts">
-	import albumImg from '$lib/assets/marcela-laskoski-YrtFlrLo2DQ-unsplash.jpg';
 	import { COLLECTIONS } from '$lib/data';
 
 	function welcomeMsg() {
@@ -15,14 +14,23 @@
 	}
 </script>
 
-<h2 class="text-3xl font-semibold mb-5">{welcomeMsg()}</h2>
+<h2 class="mb-5 text-3xl font-semibold">{welcomeMsg()}</h2>
 
 <div class="flex flex-row flex-wrap">
 	{#each COLLECTIONS as collection}
-		<div class="xl:basis-1/3 basis-1/2 p-1.5">
-			<a class="bg-white/10 hover:bg-white/20 flex flex-row rounded-xl overflow-hidden duration-300" href={collection.url}>
-				<div>
-					<img class="w-20 h-20 " src={collection.coverSrc} alt="collection cover" />
+		<div class="basis-1/2 p-1.5 xl:basis-1/3">
+			<a
+				class="flex flex-row overflow-hidden rounded-md bg-white/10 outline-none duration-300 hover:bg-white/20"
+				href={collection.url}
+				style="view-transition-name:{collection.id}"
+			>
+				<div class="h-20 w-20">
+					<img
+						class="h-full w-full object-cover"
+						src={collection.coverSrc}
+						alt="collection cover"
+						style="view-transition-name:{collection.id}-cover"
+					/>
 				</div>
 				<div class="self-center pl-4">
 					{collection.name}

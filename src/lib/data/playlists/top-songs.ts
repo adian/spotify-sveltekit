@@ -722,5 +722,6 @@ export const TOP_SONGS_PLAYLIST: Collection = createCollection({
 	tracks: TRACKS,
 	type: 'playlist',
 	coverSrc: 'https://www.theaudiodb.com/images/media/track/thumb/syuxst1484691779.jpg',
-	color: '#595038'
+	color: '#595038',
+	id: 'TOP_SONGS_PLAYLIST'
 });

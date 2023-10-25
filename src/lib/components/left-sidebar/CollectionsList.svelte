@@ -12,7 +12,7 @@
 				href={collection.url}
 			>
 				<div>
-					<img class="h-12 w-12" src={collection.coverSrc} alt="playlist cover" />
+					<img class="h-12 w-12 object-cover" src={collection.coverSrc} alt="playlist cover" />
 				</div>
 				<div>
 					<div class="flex h-full flex-col justify-evenly">
