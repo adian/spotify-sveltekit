@@ -6,6 +6,7 @@
 	import Card from '$lib/components/Card.svelte';
 	import MainViewHeader from '$lib/components/main-view/MainViewHeader.svelte';
 	import { page } from '$app/stores';
+	import NotSupportedBrowserModal from '$lib/components/NotSupportedBrowserModal.svelte';
 
 	onNavigate((navigation) => {
 		if (!document.startViewTransition) return;
@@ -26,6 +27,8 @@
 	}
 </script>
 
+<NotSupportedBrowserModal />
+
 <div class="flex h-full min-w-[1000px] flex-col p-2">
 	<div class="flex-grow">
 		<div class="flex h-full flex-row gap-2">
@@ -44,8 +47,11 @@
 	</div>
 
 	<footer class="pt-2">
-		<Card class="p-2 text-subdued text-center">
-			Content sourced from <a href="https://www.theaudiodb.com/" class="underline">TheAudioDB</a> and is made available under a Creative Commons Public Domain License.
+		<Card class="p-2 text-center text-subdued">
+			Content sourced from <a href="https://www.theaudiodb.com/" class="underline">TheAudioDB</a> and
+			is made available under a Creative Commons Public Domain License.
 		</Card>
 	</footer>
 </div>
+
+

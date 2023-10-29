@@ -6,7 +6,8 @@
 	import { onDestroy } from 'svelte';
 	import IconArrowLeft from '../icons/IconArrowLeft.svelte';
 	import IconArrowRight from '../icons/IconArrowRight.svelte';
-	import RoundButton from './RoundButton.svelte';
+	import RoundButton from '../RoundButton.svelte';
+	import IconGithub from '../icons/IconGithub.svelte';
 
 	let backStack: URL[] = [];
 	$: isBackButtonDisabled = backStack.length <= 1;
@@ -45,7 +46,18 @@
 	}
 </script>
 
-<header class="p-4" {...$$restProps}>
-	<RoundButton icon={IconArrowLeft} disabled={isBackButtonDisabled} on:click={goBack} />
-	<RoundButton icon={IconArrowRight} disabled={isForwardButtonDisabled} on:click={goForward} />
+<header class="flex flex-row justify-between p-4" {...$$restProps}>
+	<div>
+		<RoundButton disabled={isBackButtonDisabled} on:click={goBack}>
+			<IconArrowLeft class="h-4 w-4" />
+		</RoundButton>
+		<RoundButton disabled={isForwardButtonDisabled} on:click={goForward}>
+			<IconArrowRight class="h-4 w-4" />
+		</RoundButton>
+	</div>
+	<div>
+		<a href="https://github.com/adian/spotify-sveltekit">
+			<IconGithub class="h-9 w-9 fill-[#e7e7e7] hover:fill-white " />
+		</a>
+	</div>
 </header>
