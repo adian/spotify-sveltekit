@@ -1,10 +1,6 @@
 <script lang="ts">
 	import type { Collection } from '$lib/collection';
-	import {
-		mainViewCardStyle,
-		mainViewHeaderStyle
-	} from '$lib/components/main-view/main-view-store';
-	import { onDestroy } from 'svelte';
+	import IconPlay from '$lib/components/icons/IconPlay.svelte';
 
 	export let data: Collection;
 
@@ -23,14 +19,6 @@
 
 		return result;
 	}
-
-	$: mainViewHeaderStyle.set(`background-color:${data.color}`);
-	$: mainViewCardStyle.set(`view-transition-name:${data.id}`);
-
-	onDestroy(() => {
-		mainViewHeaderStyle.set('');
-		mainViewCardStyle.set('');
-	});
 </script>
 
 <div
@@ -54,8 +42,8 @@
 </div>
 
 <div class="sticky top-0 mb-4 border-b-[1px] px-4 text-subdued">
-	<div class="grid gap-3 {gridTemplate} gap-1 bg-primary px-4 py-3 text-left text-sm text-subdued">
-		<div class="pr-4">#</div>
+	<div class="grid gap-4 {gridTemplate} gap-1 bg-primary px-4 py-3 text-left text-sm text-subdued">
+		<div class="text-center">#</div>
 		<div>Title</div>
 
 		{#if data.type !== 'album'}
@@ -69,10 +57,18 @@
 <div class="px-4 text-sm">
 	{#each data.tracks as track, index}
 		<div
-			class="grid gap-3 {gridTemplate} rounded-md px-4 py-1 text-left text-subdued hover:bg-highlight"
+			class="grid gap-4 {gridTemplate} track-row rounded-md px-4 py-1 text-left text-subdued hover:bg-highlight"
 		>
-			<div class="flex items-center">{index}</div>
-			<div class="flex items-center gap-3">
+			<div class="flex items-center justify-center">
+				<span class="index-number">
+					{index}
+				</span>
+				<span class="index-icon">
+					<IconPlay class="h-4 w-4" />
+				</span>
+			</div>
+
+			<div class="row- flex items-center gap-3">
 				{#if data.type !== 'album'}
 					<div>
 						<img src={track.thumbUrl} alt="{track.title} cover" class="h-11 w-11 object-fill" />
@@ -100,5 +96,15 @@
 	}
 	.album-grid-template {
 		grid-template-columns: [index] 16px [first] 4fr [var1] minmax(120px, 1fr);
+	}
+
+	.track-row:hover .index-number {
+		display: none;
+	}
+	.track-row .index-icon {
+		display: none;
+	}
+	.track-row:hover .index-icon {
+		display: block;
 	}
 </style>

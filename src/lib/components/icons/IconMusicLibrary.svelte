@@ -1,9 +1,9 @@
 <svg
-	class={$$restProps.class || ''}
 	aria-hidden="true"
 	xmlns="http://www.w3.org/2000/svg"
 	fill="none"
 	viewBox="0 0 18 16"
+	{...$$restProps}
 >
 	<path
 		stroke="currentColor"
