@@ -8,7 +8,7 @@
 </script>
 
 <nav class="flex flex-grow flex-col gap-2 {$$restProps.class ?? ''}">
-	<Card>
+	<Card class="p-1">
 		<ul>
 			<li>
 				<MenuItem icon={IconHome} text="Home" href="/" />
@@ -16,7 +16,7 @@
 			</li>
 		</ul>
 	</Card>
-	<Card class="flex-grow">
+	<Card class="flex-grow p-1">
 		<div class="flex h-full flex-col">
 			<MenuItem icon={IconMusicLibrary} text="Your Library" href="#" />
 

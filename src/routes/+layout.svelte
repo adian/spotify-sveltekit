@@ -26,8 +26,8 @@
 	}
 </script>
 
-<div class="flex h-full min-w-[1000px] flex-col">
-	<div class="flex-grow p-2">
+<div class="flex h-full min-w-[1000px] flex-col p-2">
+	<div class="flex-grow">
 		<div class="flex h-full flex-row gap-2">
 			<LeftSidebar class="min-w-[300px] max-w-[300px]" />
 
@@ -42,4 +42,10 @@
 			</main>
 		</div>
 	</div>
+
+	<footer class="pt-2">
+		<Card class="p-2 text-subdued text-center">
+			Content sourced from <a href="https://www.theaudiodb.com/" class="underline">TheAudioDB</a> and is made available under a Creative Commons Public Domain License.
+		</Card>
+	</footer>
 </div>
