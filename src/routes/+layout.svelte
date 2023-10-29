@@ -7,8 +7,6 @@
 	import MainViewHeader from '$lib/components/main-view/MainViewHeader.svelte';
 	import { page } from '$app/stores';
 
-	export const prerender = true;
-
 	onNavigate((navigation) => {
 		if (!document.startViewTransition) return;
 

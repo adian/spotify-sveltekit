@@ -25,7 +25,7 @@
 					href={collection.url}
 					style="view-transition-name:{collection.id}"
 				>
-					<div class="h-28 w-28">
+					<div class="h-24 w-24">
 						<img
 							class="h-full w-full object-cover"
 							src={collection.coverSrc}
